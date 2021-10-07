@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="jumbotron text-center">
+        <img src="/Week6_Lab6/public/image/bearded-coder-hacker-vector-17477705.jpg " width="180px">
+        <h1>FIT2095 Clinic</h1>
+        <h2>Week6 lab</h2>
+    </div>
+
+    <div class="container text-center">
+        <button type="button" class="btn btn-primary" onclick="location.href='/'">Home</button>
+        <p></p>
+        <div>
+            <button type="button" class="btn btn-primary" onclick="location.href='/addDoctor'">Add Doctor</button>
+            <button type="button" class="btn btn-primary" onclick="location.href='/addPatient'">Add Patient</button>
+            <button type="button" class="btn btn-primary" onclick="location.href='/listDoctors'">List Doctors</button>
+            <button type="button" class="btn btn-primary" onclick="location.href='/listPatients'">List Patients</button>
+            <button type="button" class="btn btn-primary" onclick="location.href='/deletePatient'">Delete
+                Patient</button>
+            <button type="button" class="btn btn-primary" onclick="location.href='/updateDoctor'">Update Doctor</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 style=>Add New Doctor</h2>
+        <form class="form-horizontal" action="/addDoctor" method="POST">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="firstname">First Name:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="firstname" placeholder="Please enter your firstname"
+                        name="firstname">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="lastname">Last Name:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="lastname" placeholder="Please enter your lastname"
+                        name="lastname">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="dob">Date of Birth:</label>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control" id="dob" name="dob">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="state">State:</label>
+                <div class="col-sm-10">
+                    <select class="form-control" id="state" name="state">
+                        <option>VIC</option>
+                        <option>NSW</option>
+                        <option>QLD</option>
+                        <option>ACT</option>
+                        <option>SA</option>
+                        <option>WA</option>
+                        <option>TAS</option>
+                        <option>NT</option>
+                    </select>
+
+                    
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="suburb">Suburb:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="suburb" name="suburb">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="street">Street:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="street" placeholder="Please enter street" name="street">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="unit">Unit:</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="unit" placeholder="Please enter unit" name="unit">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="numPatients">Number of Patients:</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="numPatients"
+                        placeholder="Please enter Number of Patients" name="numPatients">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

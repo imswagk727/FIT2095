@@ -1,0 +1,54 @@
+<html>
+
+<head>
+
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>List Books Page</h1> </br>
+    <h1> <a href="/">Insert Books</a>
+        <a href="/getbooks">List Books</a>
+        <a href="/updatebook">Update Books</a>
+        <a href="/deletebook">Delete Books</a>
+    </h1>
+    <table>
+        <tr>
+            <td>Title</td>
+            <td>Author</td>
+            <td>Topic</td>
+            <td>Date of Publication</td>
+            <td>Summary</td>
+        </tr>
+        <% for (let i=0;i<bookDb.length;i++){ %>
+            <tr>
+                <td>
+                    <%= bookDb[i].title %>
+                </td>
+                <td>
+                    <%= bookDb[i].author %>
+                </td>
+                <td>
+                    <%= bookDb[i].topic %>
+                </td>
+                <td>
+                    <%= bookDb[i].dop %>
+                </td>
+                <td>
+                    <%= bookDb[i].summary %>
+                </td>
+            </tr>
+            <%}%>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<div>
+  <h1>Welcome to {{title}}</h1>
+</div>
+<button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" (click)="changeState()">
+  {{toggleTitle}}
+</button>
+<br>
+<hr>
+<!-- Begin of Teacher section -->
+<div *ngIf="isTeacher" id="teacherSection">
+  <label *ngIf="fullName!=''">Hi {{fullName}}</label>
+  <div>
+    Teacher Name <input name="fullName" [(ngModel)]="fullName" type="text" class="form-control" />
+  </div>
+  <div>
+    Email <input name="email" [(ngModel)]="email" type="text" class="form-control" />
+  </div>
+  <div>
+    Unit <input name="unit" [(ngModel)]="unit" type="text" class="form-control" />
+  </div>
+  <br>
+  <button (click)="saveTeacher()" class="btn btn-primary">Save Teacher</button>
+  <hr>
+  <table class="table table-striped">
+    <tr>
+      <th>ID</th>
+      <th>Full Name</th>
+      <th>Email</th>
+      <th>unit</th>
+    </tr>
+    <ng-container *ngFor="let item of hrDB;let i=index">
+      <tr *ngIf="item.type=='Teacher'">
+        <td>{{item.id}}</td>
+        <td>{{item.fullName}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.unit}}</td>
+      </tr>
+    </ng-container>
+  </table>
+</div>
+<!-- End of Teacher section -->
+<!-- Begin of Student section -->
+<div *ngIf="!isTeacher" id="studentSection">
+  <label *ngIf="fullName!=''">Hi {{fullName}}</label>
+  <div>
+    Student Name <input name="fullName" [(ngModel)]="fullName" type="text" class="form-control" />
+  </div>
+  <div>
+    Fees <input name="fees" [(ngModel)]="fees" type="number" class="form-control" />
+  </div>
+  <div>
+    School <input name="school" [(ngModel)]="school" type="text" class="form-control" />
+  </div>
+  <br>
+  <button (click)="saveStudent()" class="btn btn-primary">Save Student</button>
+  <hr>
+  <table class="table table-striped">
+    <tr>
+      <th>ID</th>
+      <th>Full Name</th>
+      <th>Fees</th>
+      <th>School</th>
+    </tr>
+    <ng-container *ngFor="let item of hrDB;let i=index">
+      <tr *ngIf="item.type=='Student'">
+        <td>{{item.id}}</td>
+        <td>{{item.fullName}}</td>
+        <td>{{item.fees}}</td>
+        <td>{{item.school}}</td>
+      </tr>
+    </ng-container>
+  </table>
+</div>
+<!-- End of Student section -->

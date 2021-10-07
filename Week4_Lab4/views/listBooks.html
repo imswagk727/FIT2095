@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Topic</th>
+            <th>Cost</th>
+        </tr>
+        <% for(let i=0;i<books.length;i++){ %>
+            <tr>
+                <td>
+                    <%= books[i].title %>
+                </td>
+                <td>
+                    <%= books[i].author %>
+                </td>
+                <td>
+                    <%= books[i].topic %>
+                </td>
+                <td>
+                    <%= books[i].cost %>
+                </td>
+            </tr>
+            <%} %>
+    </table>
+</body>
+
+
+Click <a href="/"> HERE</a> to return to home page!!
+
+</html>

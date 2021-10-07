@@ -1,0 +1,67 @@
+<div class="content">
+  <h3>First Name <br>
+    <input type="text" [(ngModel)]="fName" placeholder="First Name" />
+  </h3>
+
+  <h3>Last Name <br>
+    <input [(ngModel)]="lName" type="text" placeholder="Last Name" />
+  </h3>
+
+  <h3>Date of Birth <br>
+    <input [(ngModel)]="dob" type="date" />
+  </h3>
+
+  <h3>Suburb<br>
+    <input [(ngModel)]="suburb" type="text" />
+  </h3>
+
+  <h3>State<br>
+    <input [(ngModel)]="state" type="text" />
+  </h3>
+
+  <h3>Post Code<br>
+    <input [(ngModel)]="postcode" type="text" />
+  </h3>
+
+  <h3>Number of Patinets <br>
+    <input [(ngModel)]="noPatient" type="number" />
+  </h3>
+
+</div>
+
+<div class="button">
+  <button class="btn btn-outline-success" (click)="saveDoctor()" style="margin-right: 10px;"> Save Doctor
+    {{doctorAr.length}}</button>
+  <button class="btn btn-outline-danger" (click)="deleteDcotorsWithNoPatient()"> Delete Doctors With No Patients
+    {{NoPatientNum()}}</button>
+</div>
+<div class="content">
+  <table class="table">
+    <tr>
+      <th> # </th>
+      <th> First Name </th>
+      <th> Last Name </th>
+      <th> Date of Birth </th>
+      <th> Address </th>
+      <th> Number of Patinets </th>
+      <th> Delted? </th>
+      <th> Add Patient button</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let doctors of doctorAr; let i = index">
+      <td>{{i+1}}</td>
+      <td>{{doctors.fName}}</td>
+      <td>{{doctors.lName}}</td>
+      <td>{{doctors.dob}}</td>
+      <td>{{doctors.address}}</td>
+      <td>{{doctors.noPatient}}</td>
+      <td>
+        <button type="button" class="btn btn-outline-danger" (click)="deleteItem(i)">Delete</button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-outline-success" (click)="incPatient(i)">Add</button>
+      </td>
+      
+    </tr>
+  </table>
+</div>

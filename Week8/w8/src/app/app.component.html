@@ -1,0 +1,21 @@
+<div class="form-group">
+  <label for="item">Enter Your Items:</label>
+  <input class="form-control" [(ngModel)]="item" id="item" />
+</div>
+<br>
+<button class="btn btn-primary" (click)="newItem()">Add Item</button>
+<button class="btn btn-danger" (click)="clearItems()">Clear Items</button>
+<br>
+<div *ngIf="data.length>0">You have {{data.length}} items</div>
+<div *ngIf="data.length==5">Caution: 5 items in your array</div>
+<br>
+<table class="table table-hover">
+  <tr>
+    <th> # </th>
+    <th> Item </th>
+  </tr>
+  <tr *ngFor="let item of data; let i = index">
+    <td>{{i+1}}</td>
+    <td>{{item}}</td>
+  </tr>
+</table>

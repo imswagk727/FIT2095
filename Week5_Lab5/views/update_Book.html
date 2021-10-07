@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Update Book Page</h1></br>
+    <h1>
+        <a href="/">Insert Books</a>
+        <a href="/getbooks">List Books</a>
+        <a href="/updatebook">Update Books</a>
+        <a href="/deletebook">Delete Books</a>
+    </h1>
+    <form action="/updatebookdata" method="POST">
+        Old Title <input type="text" name="bookTitle_old" /> </br>
+        <br>
+        New title <input type="text" name="bookTitle_new" /> </br>
+        New Author <input type="text" name="bookAuthor_new" /> </br>
+        New Topic <input type="text" name="bookTopic_new" /> </br>
+        New Date of Publication <input type="date" name="bookDop_new" /> </br>
+        New Summary <input type="text" name="bookSummary_new" /> </br>
+        <input type="submit" value="Submit" /> </br>
+    </form>
+</body>
+
+</html>

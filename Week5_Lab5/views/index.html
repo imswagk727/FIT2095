@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1> Insert Book Page</h1> </br>
+    <h1>
+        <a href="/">Insert Books</a>
+        <a href="/getbooks">List Books</a>
+        <a href="/updatebook">Update Books</a>
+        <a href="/deletebook">Delete Books</a>
+        <a href="/getbooksbydate">List books between 27/08/2020 and 27/08/2021</a>
+    </h1>
+    <form action="/addnewbook" method="POST">
+        Title <input type="text" name="bookTitle" /> </br>
+        Author <input type="text" name="bookAuthor" /> </br>
+        Topic <input type="text" name="bookTopic" /> </br>
+        Date of publication <input type="date" name="bookDop" /> </br>
+        Summary <input type="text" name="bookSummary" /> </br>
+        <input type="submit" value="Submit" /> </br>
+    </form>
+</body>
+
+</html>
