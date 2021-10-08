@@ -19,6 +19,7 @@ import { ViewNotFoundComponent } from './view-not-found/view-not-found.component
 import { W10labPipe } from './w10lab.pipe';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { AgeComparePipe } from './age-compare.pipe';
 
 
 const appRoutes: Routes = [
@@ -49,6 +50,7 @@ const appRoutes: Routes = [
     DeletemovieComponent,
     ViewNotFoundComponent,
     W10labPipe,
+    AgeComparePipe,
   ],
   imports: [
     RouterModule.forRoot(appRoutes, {useHash: true}), // hash - to separate local host and device (backend frontend), act as an separator

@@ -1,14 +1,16 @@
 <div class="section">
-    <table class="table table-striped">
-      <tr>
-        <th>Name</th>
-        <th>Birth Year</th>
-        <th>Age</th>
-      </tr>
-      <tr *ngFor="let item of actorsDB">
-        <td>{{item.name}}</td>
-        <td>{{item.bYear }}</td>
-        <td>{{item.bYear | w10lab }}</td>
-      </tr>
-    </table>
-  </div>
+  <table class="table table-striped">
+    <tr>
+      <th>Name</th>
+      <th>Birth Year</th>
+      <th>Age</th>
+      <th>Old or Not</th>
+    </tr>
+    <tr *ngFor="let item of actorsDB">
+      <td>{{item.name}}</td>
+      <td>{{item.bYear }}</td>
+      <td>{{item.bYear | w10lab }}</td>
+      <td>{{item.bYear | ageCompare}}</td>
+    </tr>
+  </table>
+</div>
